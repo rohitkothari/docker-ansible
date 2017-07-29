@@ -29,10 +29,11 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     pip install ansible                && \
     \
     \
-    echo "===> Installing Custom Reqs..." && \
-    pip install dnspython                 && \
-    pip install netaddr                   && \
-    pip install shade                     && \
+    echo "===> Installing Custom Reqs..."             && \
+    pip install dnspython                             && \
+    pip install netaddr                               && \
+    pip install python-cinderclient==1.8.0            && \
+    pip install shade                                 && \
     \
     \
     echo "===> Installing handy tools (not absolutely required)..."  && \
