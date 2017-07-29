@@ -32,8 +32,7 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     echo "===> Installing Custom Reqs..."             && \
     pip install dnspython                             && \
     pip install netaddr                               && \
-    pip install python-cinderclient==1.8.0            && \
-    pip install shade                                 && \
+    pip install -U shade python-cinderclient==1.8.0                                 && \
     \
     \
     echo "===> Installing handy tools (not absolutely required)..."  && \
@@ -52,3 +51,4 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
 
 # default command: display Ansible version
 CMD [ "ansible-playbook", "--version" ]
+CMD [ "pip", "list" ]
